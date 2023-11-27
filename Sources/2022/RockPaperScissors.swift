@@ -76,4 +76,43 @@ struct RockPaperScissors {
     return totalScore
   }
 
+  static func getMoveForDesiredResult(opponentMove: Move, desiredOutcome: RoundResult) -> Move {
+    if desiredOutcome == .draw {
+      return opponentMove
+    } else if opponentMove == .rock {
+      return desiredOutcome == .win ? .paper : .scissors
+    } else if opponentMove == .paper {
+      return desiredOutcome == .win ? .scissors : .rock
+    }
+    return desiredOutcome == .win ? .rock : .paper
+  }
+
+  static func getDesiredResultFromLetter(letter: String) -> RoundResult {
+    if letter == "X" {
+      return .loss
+    } else if letter == "Y" {
+      return .draw
+    }
+    return .win
+  }
+
+  static func solvePartTwo() throws -> Int {
+    let filePath = "./2022/RockPaperScissorsInput.txt"
+    let chunks = try String(contentsOfFile: filePath).split(separator: NEW_LINE)
+
+    var totalScore: Int = 0
+    for chunk in chunks {
+      let splitChunk = chunk.split(separator: " ")
+      if splitChunk.count >= 2 {
+        let opponentMove = getMoveFromLetter(letter: String(splitChunk[0]))
+        let desiredResult = getDesiredResultFromLetter(letter: String(splitChunk[1]))
+        let myMove = getMoveForDesiredResult(
+          opponentMove: opponentMove, desiredOutcome: desiredResult)
+        totalScore += scoreForRoundResult(result: desiredResult)
+        totalScore += scoreForMove(move: myMove)
+      }
+    }
+    return totalScore
+  }
+
 }
