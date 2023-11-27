@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B736331F2B141E38005EE781 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B736331E2B141E38005EE781 /* main.swift */; };
+		B736332A2B14204A005EE781 /* CalorieCounting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73633292B14204A005EE781 /* CalorieCounting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		B736331B2B141E38005EE781 /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		B736331E2B141E38005EE781 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B73633292B14204A005EE781 /* CalorieCounting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieCounting.swift; sourceTree = "<group>"; };
+		B736332C2B1421A5005EE781 /* CalorieCountingSampleInput.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CalorieCountingSampleInput.txt; sourceTree = "<group>"; };
+		B736332D2B1421A5005EE781 /* CalorieCountingInput.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CalorieCountingInput.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,20 @@
 		B736331D2B141E38005EE781 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B73633252B141ED9005EE781 /* 2022 */,
 				B736331E2B141E38005EE781 /* main.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		B73633252B141ED9005EE781 /* 2022 */ = {
+			isa = PBXGroup;
+			children = (
+				B736332D2B1421A5005EE781 /* CalorieCountingInput.txt */,
+				B736332C2B1421A5005EE781 /* CalorieCountingSampleInput.txt */,
+				B73633292B14204A005EE781 /* CalorieCounting.swift */,
+			);
+			path = 2022;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B736332A2B14204A005EE781 /* CalorieCounting.swift in Sources */,
 				B736331F2B141E38005EE781 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
